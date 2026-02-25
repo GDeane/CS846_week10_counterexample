@@ -390,11 +390,13 @@ Context Given:
 ### Problem C_1: \[Savira Umar\]
 
 **Task Description:**\
-Debug date_utils.py because it crashes when running test_date_utils.py. The crash happens inside add_days(date_str, days) for some inputs.
+Debug date_utils.py because it crashes when running test_date_utils.py. The crash happens inside add_days(date_str,
+days) for some inputs.
 
 **Starter Code:**
 
-The function and example test file is found in https://github.com/GDeane/CS846_week8_counterexample/tree/master/week8/C_1.
+The function and example test file is found
+in https://github.com/GDeane/CS846_week8_counterexample/tree/master/week8/C_1.
 
 A note on GenAI contribution:\
 The counterexample prompts and structured documentation were generated
@@ -454,9 +456,12 @@ def add_days(date_str: str, days: int) -> str:
 
 This output is weak for this debugging task because:
 
-> Guideline 3 was not enforced: the prompt didn’t require debug output/logs before edits, so Copilot made a “best guess” fix without observing runtime state.
-> Guideline 6 was too vague: “keep edge cases in mind” didn’t force Copilot to explicitly verify edge cases (empty string, impossible date, wrong format, etc.).
-> No localization evidence: it didn’t show which exact input caused the failure or which line triggered the crash during the test run.
+> Guideline 3 was not enforced: the prompt didn’t require debug output/logs before edits, so Copilot made a “best guess”
+> fix without observing runtime state.
+> Guideline 6 was too vague: “keep edge cases in mind” didn’t force Copilot to explicitly verify edge cases (empty
+> string, impossible date, wrong format, etc.).
+> No localization evidence: it didn’t show which exact input caused the failure or which line triggered the crash during
+> the test run.
 > Result: the fix may look reasonable, but it’s still speculative, not evidence-driven.
 
 ---
@@ -485,9 +490,9 @@ date_utils.py crashes when running test_date_utils.py.
 Before modifying any logic, do the following:
 
 1. Add temporary debug prints inside add_days() to print:
-   - the incoming date_str
-   - the incoming days value
-   - the exact line where the exception occurs
+    - the incoming date_str
+    - the incoming days value
+    - the exact line where the exception occurs
 
 2. Tell me what command to run.
 
@@ -533,6 +538,7 @@ def add_days(date_str: str, days: int) -> str:
 #### Result
 
 The improved prompt produced a better debugging outcome because:
+
 - It forced runtime inspection first (Guideline 3 actually applied).
 - It placed constraints and explicit edge cases at the end (Guideline 6 used correctly).
 - It reduced “random fixes” and made the next step clear: run tests, read logs, then apply the smallest safe patch.
