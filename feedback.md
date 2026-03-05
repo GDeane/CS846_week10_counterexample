@@ -21,7 +21,7 @@ in https://github.com/GDeane/CS846_week9_counterexample/tree/master/Week9/A_1.
 
 ### 2. Guidelines that didn't work for Problem A_1
 
-#### Guideline X: 
+#### Guideline 5: Use a fault model (mutation mindset) to Drive Test Adequancy 
 
 **Prompt and Context:**
 
