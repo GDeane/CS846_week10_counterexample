@@ -15,7 +15,7 @@
 The function and example test file is found
 in https://github.com/GDeane/CS846_week9_counterexample/tree/master/Week9/A_1.
 
-> A note on GenAI contribution: The code examples and test files were generated using GitHub Copilot: [Claude Opus 4.6]
+> A note on GenAI contribution: The code examples and test files were generated using Claude Code: [Claude Sonnet 4.6]
 
 ---
 
