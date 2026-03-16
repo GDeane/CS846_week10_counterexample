@@ -11,11 +11,8 @@
 Review `parse_date.py`, a small Python date-parsing utility that exposes a public API for
 parsing user-supplied date strings. The file contains two functions:
 
-- `parse_date(date_string, fmt)` — parses a string into a `datetime` object, silently
-  returning `None` on invalid input instead of raising an exception. Its docstring states
-  *"Returns a datetime object for the given string"* with no mention of the `None` case.
-- `days_until(date_string, fmt)` — calls `parse_date` and computes the delta to today,
-  crashing with an `AttributeError` when `parse_date` returns `None`.
+- `parse_date(date_string, fmt)` — parses a string into a `datetime` object.
+- `days_until(date_string, fmt)` — calls `parse_date` and computes the delta to today.
 
 Perform a code review and suggest all improvements.
 
