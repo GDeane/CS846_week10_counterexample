@@ -59,12 +59,15 @@ Context Given: `parse_date.py`
 
 1. **Uncaught None Handling in days_until**
     - **Category:** Bug Fix (P1)
-    - **Issue:** If `parse_date` returns `None` (invalid input), `days_until` will raise an `AttributeError` when subtracting `None` from `today`.
-    - **Fix:** Add a check for `target is None` and raise a clear exception or return a sentinel value (e.g., `None` or `float('nan')`).
+    - **Issue:** If `parse_date` returns `None` (invalid input), `days_until` will raise an `AttributeError` when
+      subtracting `None` from `today`.
+    - **Fix:** Add a check for `target is None` and raise a clear exception or return a sentinel value (e.g., `None` or
+      `float('nan')`).
 
 2. **Ambiguous Return Type in parse_date**
     - **Category:** Bug Fix (P1)
-    - **Issue:** `parse_date` returns `None` on error, but the docstring says it returns a `datetime` object. This can mislead callers and cause runtime errors.
+    - **Issue:** `parse_date` returns `None` on error, but the docstring says it returns a `datetime` object. This can
+      mislead callers and cause runtime errors.
     - **Fix:** Update the docstring to clarify the return type, or raise an exception instead of returning `None`.
 
 ---
@@ -74,7 +77,8 @@ Context Given: `parse_date.py`
 3. **Default Format Limitation**
     - **Category:** Enhancement (P2)
     - **Issue:** Only supports a single default format (`%Y-%m-%d`). Many user-supplied dates use other common formats.
-    - **Fix:** Accept a list of formats and try each in turn, or use a library like `dateutil.parser` for more flexible parsing.
+    - **Fix:** Accept a list of formats and try each in turn, or use a library like `dateutil.parser` for more flexible
+      parsing.
 
 4. **Lack of Type Hints**
     - **Category:** Enhancement (P2)
